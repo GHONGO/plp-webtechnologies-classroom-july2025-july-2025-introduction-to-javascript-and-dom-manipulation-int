@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Task Manager - JavaScript Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Personal Task Manager</h1>
+            <p>JavaScript Fundamentals in Action</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Part 1: JavaScript Basics -->
+            <div class="section">
+                <h2> Part 1: JavaScript Basics & User Profile</h2>
+                <div class="input-group">
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName" placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="userAge">Your Age:</label>
+                    <input type="number" id="userAge" placeholder="Enter your age" min="1" max="120">
+                </div>
+                <button class="btn" onclick="processUserInfo()">Process Info</button>
+                <div id="userOutput" class="output hidden"></div>
+            </div>
+
+            <!-- Part 2: Functions -->
+            <div class="section">
+                <h2> Part 2: Task Management Functions</h2>
+                <div class="input-group">
+                    <label for="taskInput">New Task:</label>
+                    <input type="text" id="taskInput" placeholder="What do you need to do?">
+                </div>
+                <div class="input-group">
+                    <label for="taskPriority">Priority:</label>
+                    <select id="taskPriority">
+                        <option value="low">Low Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="addTask()">Add Task</button>
+                <button class="btn btn-secondary" onclick="clearCompleted()">Clear Completed</button>
+                <button class="btn btn-danger" onclick="clearAllTasks()">Clear All</button>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalTasks">0</div>
+                        <div class="stat-label">Total Tasks</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="completedTasks">0</div>
+                        <div class="stat-label">Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="pendingTasks">0</div>
+                        <div class="stat-label">Pending</div>
+                    </div>
+                </div>
+
+                <div id="taskList"></div>
+            </div>
+
+            <!-- Part 3: Loops -->
+            <div class="section">
+                <h2> Part 3: Loop Demonstrations</h2>
+                <button class="btn" onclick="generateCountdown()">Countdown Timer</button>
+                <button class="btn btn-secondary" onclick="showTaskSummary()">Task Summary Report</button>
+                <button class="btn" onclick="generateMotivation()">Daily Motivation</button>
+                <div id="loopOutput" class="output hidden"></div>
+            </div>
+
+            <!-- Part 4: DOM Manipulation -->
+            <div class="section">
+                <h2> Part 4: Interactive DOM Features</h2>
+                <button class="btn" onclick="toggleTheme()">Toggle Theme</button>
+                <button class="btn btn-secondary" onclick="animateHeader()">Animate Header</button>
+                <button class="btn" onclick="createFloatingMessage()">Show Success Message</button>
+                <div id="dynamicContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
